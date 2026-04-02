@@ -1,24 +1,26 @@
 @extends('layouts.app')
 
-@section('title', 'Contact')
-
 @section('content')
-    <h1 class="text-3xl font-bold mb-4">Hubungi Kami</h1>
-    <p class="text-lg text-gray-700 mb-6">Jika Anda memiliki pertanyaan atau ingin menghubungi kami, silakan isi formulir di bawah ini.</p>
-
-    <form action="#" method="POST" class="bg-white p-6 rounded-lg shadow-md">
-        <div class="mb-4">
-            <label for="name" class="block text-gray-700 font-bold mb-2">Nama:</label>
-            <input type="text" id="name" name="name" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-200">
+<div class="max-w-4xl mx-auto px-8 py-20 flex flex-col items-center">
+    <div class="w-full p-1 border border-lime-500/20 rounded-2xl">
+        <div class="bg-zinc-950 p-12 rounded-xl border border-zinc-800 shadow-inner">
+            <h2 class="font-neon text-2xl text-center mb-12 lime-text uppercase">Open_Channel</h2>
+            <form class="space-y-8">
+                <div class="relative group">
+                    <input type="text" class="w-full bg-transparent border-b border-zinc-800 py-3 px-2 focus:outline-none focus:border-[#ccff00] transition-all text-white placeholder:text-zinc-800" placeholder="USER_NAME">
+                </div>
+                <div class="relative group">
+                    <input type="email" class="w-full bg-transparent border-b border-zinc-800 py-3 px-2 focus:outline-none focus:border-[#ccff00] transition-all text-white placeholder-zinc-800" placeholder="CONNECTION_ADDR">
+                </div>
+                <div class="relative group">
+                    <textarea rows="3" class="w-full bg-transparent border-b border-zinc-800 py-3 px-2 focus:outline-none focus:border-[#ccff00] transition-all text-white placeholder-zinc-800" placeholder="MESSAGE_PAYLOAD"></textarea>
+                </div>
+                <button class="group flex items-center space-x-4 text-[#ccff00] font-neon text-xs tracking-[0.5em] hover:translate-x-4 transition-all uppercase">
+                    <span>Send_Signal</span>
+                    <span class="h-px w-20 bg-[#ccff00] group-hover:w-40 transition-all"></span>
+                </button>
+            </form>
         </div>
-        <div class="mb-4">
-            <label for="email" class="block text-gray-700 font-bold mb-2">Email:</label>
-            <input type="email" id="email" name="email" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-200">
-        </div>
-        <div class="mb-4">
-            <label for="message" class="block text-gray-700 font-bold mb-2">Pesan:</label>
-            <textarea id="message" name="message" rows="5" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-200"></textarea>
-        </div>
-        <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">Kirim</button>
-    </form>
+    </div>
+</div>
 @endsection

@@ -17,3 +17,7 @@ Route::get('/about', function () {
 Route::get('/contact', function () {
     return view('Contact');
 });
+
+Route::get('/HalamanFitur', function () {
+    return view('HalamanFitur');
+});
